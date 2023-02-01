@@ -1,10 +1,21 @@
-if __name__ == "__main__":
-    print("Let's go!")
+from git import Repo
+import os
 
+DEFAULT_REPO_NAME = "wingman-cellar"
+CURR_WORKING_DIR = os.path.abspath(os.getcwd())
+
+
+
+
+
+def main():
+    print("Let's go!")
 
     # ---------------- #
     #   Action plan!   #
     # ---------------- #
+
+
 
     # Define mode:
     # For MVP only Mon-Fri (work-days mode)
@@ -12,6 +23,9 @@ if __name__ == "__main__":
     # Define range (how many days backwards)
 
     # Try to create separate repo
+
+    path = os.path.join(CURR_WORKING_DIR, DEFAULT_REPO_NAME)
+    repo = Repo.init(path, bare=True)
 
     # Try to create commit
 
@@ -31,3 +45,7 @@ if __name__ == "__main__":
 
     # Maybe add mode for filling just "alone" days
 
+
+
+if __name__ == "__main__":
+    main()
