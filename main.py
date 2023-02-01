@@ -1,4 +1,5 @@
 from git import Repo
+from args import use_args
 import os
 
 DEFAULT_REPO_NAME = "wingman-cellar"
@@ -10,6 +11,8 @@ CURR_WORKING_DIR = os.path.abspath(os.getcwd())
 
 def main():
     print("Let's go!")
+    args = use_args()
+    print(args)
 
     # ---------------- #
     #   Action plan!   #
@@ -24,8 +27,8 @@ def main():
 
     # Try to create separate repo
 
-    path = os.path.join(CURR_WORKING_DIR, DEFAULT_REPO_NAME)
-    repo = Repo.init(path, bare=True)
+    # path = os.path.join(CURR_WORKING_DIR, DEFAULT_REPO_NAME)
+    # repo = Repo.init(path, bare=True)
 
     # Try to create commit
 
